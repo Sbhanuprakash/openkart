@@ -1,0 +1,27 @@
+<app-header (onHeaderClickedEvent)="onAppheaderClick($event)"></app-header>
+<h1>welcome to openkart</h1>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-5">
+            <app-product-list (productselectedparent)="onselectedproduct($event)" *ngIf="selectedLink=='productlist'">product list works</app-product-list>
+        </div>
+        <div class="col-md-7">
+            <app-product-detail [sProduct]="selectedproduct" *ngIf="selectedLink=='productlist'">product detail works</app-product-detail>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <app-order-list *ngIf="selectedLink=='orders'">order list works</app-order-list>
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <app-register-form *ngIf="selectedLink=='register'">register works</app-register-form>
+        </div>
+
+
+    </div>
+</div>

@@ -1,0 +1,38 @@
+
+<div class="row">
+    <div class="col-xs-4">
+        <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" class="form-control" #namereference>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-4">
+        <div class="form-group">
+            <label for="email">email</label>
+            <input type="text" id="email" class="form-control" #emailreference>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-4">
+        <div class="form-group">
+            <label for="password">password</label>
+            <input type="text" id="password" class="form-control" #pwdreference>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-4">
+        <div class="form-group">
+            <label for="mobile">mobile</label>
+            <input type="text" id="mobile" class="form-control" #mobilereference>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs=12">
+        <button type="button" (click)="onregister(namereference,emailreference,pwdreference,mobilereference)" class="btn btn-success">Register</button>
+    </div>
+</div>

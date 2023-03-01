@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-xs-12">
+        <img [src]="sProduct.imagepath" class="img-responsive">
+    </div>
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h2>{{sProduct.name}}</h2>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-xs-12">
+        <div class="dropdown" appmanager >
+            <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">manage<span class="caret"></span></button>
+            <ul class="dropdown-menu">
+                <li><a href="#">edit product</a></li>
+                <li><a href="#">delete product</a></li>
+
+            </ul>
+        </div>
+
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-xs-12">
+        <h3>{{sProduct.description}}</h3>
+    </div>
+</div>

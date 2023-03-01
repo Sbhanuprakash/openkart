@@ -1,0 +1,15 @@
+
+
+<a (click)="onitemClicked()" class="list-group-item  clearfix">
+    <div class="pull-left">
+        <h4 class="list-group-items-heading">{{product.name}}</h4>
+        <p class="list-group-item-text">{{product.description}}</p>
+    </div>
+    <span class="lable lable-primary">{{product.price}}</span>
+    <span class="pull-right">
+        <div class="row">
+            <img [src]="product.imagepath" alt="{{product.name}}" class="img-responsive"style="max-height: 50px;">
+            <span class="lable lable-default">{{product.brand}}</span>
+        </div>
+    </span>
+</a>
