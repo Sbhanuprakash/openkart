@@ -12,7 +12,7 @@ stages {
                 echo "Cloning the openkart project from github to container"
                 checkout scm
                 echo " sucessfully cloned the openkart project" 
-                sh "ls - lrth"
+                sh "ls -lrth"
             }
          }
          
