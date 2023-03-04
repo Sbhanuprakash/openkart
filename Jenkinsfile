@@ -2,7 +2,7 @@
 
 pipeline {
            agent any
-           
+
 stages {
 
 
@@ -15,7 +15,26 @@ stages {
                 sh "ls - lrth"
             }
          }
-       
+         
+          stage('DockerSetup'){
+            steps{
+                script{
+                     def dockerHome = tool 'MyDocker'
+                     echo ">>>>>>>${dockerHome}"
+                     env.PATH = "${dockerHome}/bin:${env.PATH}"
+
+
+
+                }
+
+
+
+            }
+
+
+
+
+          }
           stage('Docker Check'){
                   steps{
                         
