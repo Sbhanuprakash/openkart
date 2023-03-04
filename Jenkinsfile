@@ -61,9 +61,9 @@ stages {
                     def customImage = docker.build("sbhanuprakash/openkart_jenkins:${env.BUILD_ID}")
                     echo "pushing the image************"
 
-                    withCredentials([usernamePassword(credentialsId:'Dockerid', passwordVariable:'DockeridPassword',usernameVariable:'Dockeriduser' )])
+                    withCredentials([usernamePassword(credentialsId:'Dockerid', passwordVariable:'DockeridPassword',usernameVariable:'DockeridUser' )])
                     {
-                       sh "docker login -u ${env.Dockeriduser} -p${env.DockeridPassword} "
+                       sh "docker login -u ${env.DockeridUser} -p ${env.DockeridPassword} "
                        sh "docker push sbhanuprakash/openkart_jenkins:${env.BUILD_ID}"
                     }
 
